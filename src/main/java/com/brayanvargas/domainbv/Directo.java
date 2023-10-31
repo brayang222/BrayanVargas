@@ -8,12 +8,17 @@ public class Directo extends Empleado{
       this.salarioBrayan = salarioBrayan;
    }
 
+   @Override
+   public Long calcularSalarioVargas() {
+      return (salarioBrayan - calcularPensionVargas()) - calcularSaludVargas();
+   }
+
    public long calcularSaludVargas(){
-      return (long) (salarioBrayan - 0.05 * salarioBrayan);
+      return (long) (0.05 * salarioBrayan);
    }
 
    public long calcularPensionVargas(){
-      return (long) (salarioBrayan - 0.065 * salarioBrayan);
+      return (long) (0.065 * salarioBrayan);
    }
 
    public long getSalarioBrayan() {

@@ -1,15 +1,13 @@
 package com.brayanvargas.domainbv;
 
-public class Empleado {
+public abstract class Empleado {
    private String empleadoBrayan;
 
    public Empleado(String empleadoBrayan) {
       this.empleadoBrayan = empleadoBrayan;
    }
 
-   public long calcularSalarioVargas(){
-      return 2;
-   }
+   public abstract Long calcularSalarioVargas();
 
    @Override
    public String toString() {

@@ -8,12 +8,17 @@ public class Vendedor extends Directo{
       this.ventasDelMesBrayan = ventasDelMesBrayan;
    }
 
+   @Override
+   public Long calcularSalarioVargas() {
+      return getSalarioBrayan() + calcularComisionVargas();
+   }
+
    public long calcularComisionVargas(){
       long comision = 0;
       if (getSalarioBrayan() < 999999){
-         comision = (long) ((ventasDelMesBrayan * 0.04) * getSalarioBrayan());
+         comision = (long) ((ventasDelMesBrayan * 0.04));
       } else {
-         comision = (long) ((ventasDelMesBrayan * 0.035) * getSalarioBrayan());
+         comision = (long) ((ventasDelMesBrayan * 0.035));
       }
       return comision;
    }

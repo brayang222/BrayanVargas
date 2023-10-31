@@ -12,6 +12,11 @@ public class Promotor extends Empleado{
       this.comprasVolanteBrayan = comprasVolanteBrayan;
    }
 
+   @Override
+   public Long calcularSalarioVargas() {
+      return (long) ((valorVolanteBrayan * volantesRepartidosBrayan) + (15.000 * comprasVolanteBrayan));
+   }
+
    public int getVolantesRepartidosBrayan() {
       return volantesRepartidosBrayan;
    }

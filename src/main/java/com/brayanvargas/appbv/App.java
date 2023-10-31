@@ -2,10 +2,14 @@ package com.brayanvargas.appbv;
 
 import com.brayanvargas.domainbv.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class App {
    public static void main(String[] args) {
 
-
+      List <Empleado> empleados = new ArrayList<>();
 
       Directo empleado1 = new Directo("Juan", 4840000);
       Vendedor empleado2 = new Vendedor("Julian", 205000, 45510000);
@@ -15,10 +19,11 @@ public class App {
       Directo empleado6 = new Directo("David", 3975000);
       Freelance empleado7 = new Freelance("Gustavo", 42500, 65);
 
-      System.out.println(empleado1.getEmpleadoBrayan() + " " + empleado1.getSalarioBrayan());
-      System.out.println(empleado1.calcularSaludVargas());
+      empleados.addAll(Arrays.asList(empleado1, empleado2, empleado3, empleado4, empleado5, empleado6, empleado7));
 
+      Nomina nomina = new Nomina(empleados);
 
+      nomina.calcularNominaVargas();
 
    }
 }

@@ -10,6 +10,11 @@ public class Freelance extends Empleado{
       this.horasTrabajadasBrayan = horasTrabajadasBrayan;
    }
 
+   @Override
+   public Long calcularSalarioVargas() {
+      return valorHoraBrayan * horasTrabajadasBrayan;
+   }
+
    public long getValorHoraBrayan() {
       return valorHoraBrayan;
    }
@@ -20,5 +25,9 @@ public class Freelance extends Empleado{
 
    public void setHorasTrabajadasBrayan(int horasTrabajadasBrayan) {
       this.horasTrabajadasBrayan = horasTrabajadasBrayan;
+   }
+
+   public void setValorHoraBrayan(long valorHoraBrayan) {
+      this.valorHoraBrayan = valorHoraBrayan;
    }
 }
