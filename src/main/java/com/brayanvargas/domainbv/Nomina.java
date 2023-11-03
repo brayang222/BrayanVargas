@@ -17,8 +17,11 @@ public class Nomina {
 
    public void listarDirectosVargas(){
       for (Empleado empleado : empleadosBrayan){
-         if (empleado instanceof Directo){
-            System.out.println(empleado.getEmpleadoBrayan() + " " + empleado.calcularSalarioVargas() + " Empleado directo");
+         if (empleado instanceof Vendedor){
+            System.out.println(empleado.getEmpleadoBrayan() + " Salario: " + empleado.calcularSalarioVargas() + " Empleado directo vendedor");
+         }
+         else if (empleado instanceof Directo){
+            System.out.println(empleado.getEmpleadoBrayan() + " Salario: " + empleado.calcularSalarioVargas() + " Empleado directo");
          }
       }
    }
@@ -26,7 +29,7 @@ public class Nomina {
    public void listarFreelanceVargas(){
       for (Empleado empleado : empleadosBrayan){
          if (empleado instanceof Freelance){
-            System.out.println(empleado.getEmpleadoBrayan() + " " + empleado.calcularSalarioVargas() + " Empleado freelance");
+            System.out.println(empleado.getEmpleadoBrayan() + " Salario: " + empleado.calcularSalarioVargas() + " Empleado freelance");
          }
       }
    }
@@ -34,7 +37,7 @@ public class Nomina {
    public void listarPromotoresVargas(){
       for (Empleado empleado : empleadosBrayan){
          if (empleado instanceof Promotor){
-            System.out.println(empleado.getEmpleadoBrayan() + " " + empleado.calcularSalarioVargas() + " Empleado promotor");
+            System.out.println(empleado.getEmpleadoBrayan() + " Salario: " + empleado.calcularSalarioVargas() + " Empleado promotor");
          }
       }
    }
